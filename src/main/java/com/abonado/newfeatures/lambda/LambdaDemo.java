@@ -41,12 +41,18 @@ public class LambdaDemo {
 	int x = 1000;
 
 	public void myLambdaMethod() {
+		int z = 100;
+		
 		MyInterface myInterface = () -> {
 			// int x = 786; //Lambda expression local variable can't redeclare another
 			// local variable
-			int y = 99;
+			int y = 99; //local variable
 			System.out.println("myLambdaMethod>>>>>"+this.x);
 			System.out.println("myLambdaMethod>>>>>"+y);
+			
+			x = 2000; //instance variable value we can change, no issues
+			y = 100; //fine
+			//z = 200; //can't do this. local variable referenced from lambda must be final
 
 		};
 		
@@ -58,6 +64,7 @@ public class LambdaDemo {
 			int x = 786; //we can redeclard local variable of main class.
 			@Override
 			public void myMethod() {
+				
 				int y = 99;
 				System.out.println("myAnonymusMethod>>>>>"+this.x);
 				System.out.println("myAnonymusMethod>>>>>"+y); //not this.y
