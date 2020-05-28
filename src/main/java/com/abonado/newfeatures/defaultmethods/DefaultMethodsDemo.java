@@ -34,6 +34,8 @@ public class DefaultMethodsDemo implements MyInterface, MyInterface1{
 		MyInterface.super.method1();
 		//MyInterface1.super.method1();
 		System.out.println();
+
+
 	}
 
 }
