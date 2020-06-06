@@ -23,6 +23,8 @@ public class DefaultMethodsDemo implements MyInterface, MyInterface1{
 		demo.method1();
 
 	}
+
+
 	
 	//when two interfaces have same method, provide your own implementation
 	//and call the methods you need or you can have your own implementation
@@ -31,6 +33,9 @@ public class DefaultMethodsDemo implements MyInterface, MyInterface1{
 		//System.out.println("My Class default method impl");
 		MyInterface.super.method1();
 		//MyInterface1.super.method1();
+		System.out.println();
+
+
 	}
 
 }
